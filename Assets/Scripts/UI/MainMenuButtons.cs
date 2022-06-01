@@ -8,12 +8,11 @@ public class MainMenuButtons : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("PlayScene");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("PlayScene"));
     }
 
     public void LoadOption()
     {
-        Debug.Log("It works");
+        SceneManager.LoadScene("OptionScene");
     }
 
     public void QuitGame()

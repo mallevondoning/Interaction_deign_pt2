@@ -42,10 +42,16 @@ public class CameraMovement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * DataManager.Sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * DataManager.Sensitivity * Time.deltaTime;
 
-        _xRot += mouseX;
+        if (!DataManager.InvertedX)
+            _xRot += mouseX;
+        else
+            _xRot -= mouseX;
         _xRot = Mathf.Clamp(_xRot, -_maxXRot, _maxXRot);
 
-        _yRot -= mouseY;
+        if(!DataManager.InvertedY)
+            _yRot -= mouseY;
+        else
+            _yRot += mouseY;
         _yRot = Mathf.Clamp(_yRot, -_maxYRot, _maxYRot);
 
         _playerCamera.transform.rotation = Quaternion.Euler(_yRot, _xRot, 0f);

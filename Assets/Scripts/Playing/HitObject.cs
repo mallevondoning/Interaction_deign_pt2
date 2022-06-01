@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class HitObject : MonoBehaviour
 {
+    [SerializeField]
+    private float _baseScore = 100f;
+    [SerializeField]
+    private float _lowestScore = 10f;
+    [SerializeField]
+    private float _timeToLowestScore = 3f;
+
     private int xPos = 0;
     private int yPos = 0;
 
-    private float baseScore = 100f;
+    private float _addableScore;
 
     private void Awake()
     {
@@ -22,11 +29,15 @@ public class HitObject : MonoBehaviour
         } while (yPos == DataManager.LastHitObjectYPos);
 
         transform.position = new Vector3(xPos, yPos, 10);
+
+        GetComponent<Renderer>().material.color = DataManager.HitObjectColor;
+
+        _addableScore = _baseScore;
     }
 
     private void Update()
     {
-        baseScore -= 10 * Time.deltaTime;
+        _addableScore -= (_baseScore-_lowestScore)/_timeToLowestScore * Time.deltaTime;
     }
 
     private void OnDestroy()
@@ -35,7 +46,7 @@ public class HitObject : MonoBehaviour
         DataManager.LastHitObjectYPos = yPos;
 
         DataManager.TargetsHit++;
-        DataManager.Score += Mathf.RoundToInt(Mathf.Clamp(baseScore,10f,100f));
+        DataManager.Score += Mathf.RoundToInt(Mathf.Clamp(_addableScore,_lowestScore,_baseScore));
 
         DataManager.HitObjectList.Clear();
     }

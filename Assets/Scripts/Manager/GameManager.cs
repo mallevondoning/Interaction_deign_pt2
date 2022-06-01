@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
             QuitToMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             ResetStats();
         }
@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetStats()
     {
+        DataManager.HitObjectList.Clear();
+
         DataManager.TotalClicks = 0;
         DataManager.TargetsHit = 0;
         DataManager.Score = 0;

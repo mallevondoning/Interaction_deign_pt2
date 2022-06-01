@@ -7,8 +7,11 @@ public static class DataManager
     public static List<GameObject> HitObjectList = new List<GameObject>();
 
     //option varibale
-    public static float Sensitivity { get; set; } = 100f;
     public static Color RedicalColor { get; set; } = Color.red;
+    public static Color HitObjectColor { get; set; } = Color.gray;
+    public static float Sensitivity { get; set; } = 100f;
+    public static bool InvertedX { get; set; } = false;
+    public static bool InvertedY { get; set; } = false;
 
     //
     public static int LastHitObjectXPos { get; set; } = 0;

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4790449217767687315}
   - component: {fileID: 3658538204859303849}
   m_Layer: 6
-  m_Name: Icosphere
+  m_Name: HitObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34066,3 +34066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb89a0a4bd278e47b0b2a615c69bcec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseScore: 100
+  _lowestScore: 10
+  _timeToLowestScore: 3
