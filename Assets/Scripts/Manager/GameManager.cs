@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     public void QuitToMenu()
     {
+        HitObject.InGame = false;
+
         ResetStats();
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("StartScene");

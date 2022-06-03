@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HitObject : MonoBehaviour
 {
+    public static bool InGame { get; set; } = false;
+
     [SerializeField]
     private float _baseScore = 100f;
     [SerializeField]
@@ -42,12 +45,15 @@ public class HitObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        DataManager.LastHitObjectXPos = xPos;
-        DataManager.LastHitObjectYPos = yPos;
+        if (InGame)
+        {
+            DataManager.LastHitObjectXPos = xPos;
+            DataManager.LastHitObjectYPos = yPos;
 
-        DataManager.TargetsHit++;
-        DataManager.Score += Mathf.RoundToInt(Mathf.Clamp(_addableScore,_lowestScore,_baseScore));
+            DataManager.TargetsHit++;
+            DataManager.Score += Mathf.RoundToInt(Mathf.Clamp(_addableScore,_lowestScore,_baseScore));
 
-        DataManager.HitObjectList.Clear();
+            DataManager.HitObjectList.Clear();
+        }
     }
 }

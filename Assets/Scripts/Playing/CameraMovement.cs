@@ -30,11 +30,8 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("PlayScene")))
-        {
-            RotateCamera();
-            ShootLaser();
-        }
+        RotateCamera();
+        ShootLaser();
     }
 
     public void RotateCamera()

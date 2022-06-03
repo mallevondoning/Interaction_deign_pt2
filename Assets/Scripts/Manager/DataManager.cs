@@ -13,7 +13,10 @@ public static class DataManager
     public static bool InvertedX { get; set; } = false;
     public static bool InvertedY { get; set; } = false;
 
-    //
+    public static float TimerInSec { get; set; }
+    public static bool FInishedState { get; set; }
+
+    //postion data of HitObject
     public static int LastHitObjectXPos { get; set; } = 0;
     public static int LastHitObjectYPos { get; set; } = 0;
 
@@ -23,4 +26,8 @@ public static class DataManager
 
     //score text
     public static int Score { get; set; } = 0;
+
+    //highscore data
+    public static int Highscore { get; set; }
+    public static float BestTime { get; set; }
 }
