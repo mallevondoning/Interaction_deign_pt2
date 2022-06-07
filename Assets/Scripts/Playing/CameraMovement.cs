@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CameraMovement : MonoBehaviour
@@ -30,8 +29,11 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        RotateCamera();
-        ShootLaser();
+        if(!DataManager.FinishedState)
+        {
+            RotateCamera();
+            ShootLaser();
+        }
     }
 
     public void RotateCamera()

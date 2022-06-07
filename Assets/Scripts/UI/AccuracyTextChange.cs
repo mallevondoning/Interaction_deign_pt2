@@ -11,12 +11,14 @@ public class AccuracyTextChange : MonoBehaviour
     private void Update()
     {
         if (DataManager.TotalClicks == 0)
-            _acc.text = "0%";
+            _acc.text = DataManager.AccuracyData;
         else
         {
             float percent = (float)DataManager.TargetsHit / DataManager.TotalClicks;
             int visualPercent = Mathf.RoundToInt(percent * 100);
-            _acc.text = visualPercent.ToString() + "%";
+            DataManager.AccuracyData = visualPercent.ToString() + "%";
         }
+
+        _acc.text = DataManager.AccuracyData;
     }
 }

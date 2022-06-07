@@ -23,12 +23,17 @@ public class MainMenuButtons : MonoBehaviour
 
     public void LoadScoredGame()
     {
-        Debug.Log("Scored was loaded");
+        DataManager.ScoredGameStarted = true;
+        DataManager.TimerInSec = 10f;
+
+        LoadNormalGame();
     }
 
     public void LoadTimedGame()
     {
-        Debug.Log("Timed was loaded");
+        DataManager.TimedGameStarted = true;
+
+        LoadNormalGame();
     } 
 
     public void LoadOption()
