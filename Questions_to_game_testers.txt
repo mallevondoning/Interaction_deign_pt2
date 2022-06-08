@@ -1,21 +1,30 @@
-was the controls easy to understand?
-was the menu easy to navigate through?
-is the option menu easy to digested and understand?
+while playing:
 
+playing scored game:
 is it easy to understand that you got score?
 is the scoring system easy to understand?
+
+playing timed game:
 do you think the timer was unnecessary to this game?
 
-witch gamemode did you like the most? describe why?
 would a highscore system make this game more intriguing to play? describe why?
+could you say that you want to "prefect" your score or time in this game? describe why?
 
-what type emotion/feelings would you say you had when you played?
-did you feel stressed at any point?
-(if yes) describe witch part of the game you feelt stressed on.
-could you say if you played this game enough you could enter some kind of flow state?
+could you say if you played this game enough you could enter some kind of flow state? describe why?
 
-could you say that you want to "prefect" your score or time in this game?
-
+what type emotion/feelings would you say you had when you played
 what was good/fun about the game and what was bad/boring about the game?
+
+done playing:
+
+was the controls easy to understand?
+was the menu easy to navigate through?
+
+is the option menu easy to digested and understand?
+
+witch gamemode did you like the most? describe why?
+
+did you feel stressed at any point? (if yes) describe witch part of the game you feelt stressed on.
+
 what would you want to be added to the game?
 any more constructive criticism to this game?

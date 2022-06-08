@@ -24,7 +24,7 @@ public class MainMenuButtons : MonoBehaviour
     public void LoadScoredGame()
     {
         DataManager.ScoredGameStarted = true;
-        DataManager.TimerInSec = 10f;
+        DataManager.TimerInSec = 120f;
 
         LoadNormalGame();
     }
